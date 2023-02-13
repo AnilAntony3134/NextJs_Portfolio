@@ -1,7 +1,8 @@
 import React from "react";
 import Button from "../Button";
-
+// import * as Icons from 'react-bootstrap-icons';
 import yourData from "../../data/portfolio.json";
+import Image from "next/image";
 
 const Socials = ({ className }) => {
   return (
