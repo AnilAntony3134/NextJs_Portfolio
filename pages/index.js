@@ -14,6 +14,7 @@ import Cursor from "../components/Cursor";
 // Local Data
 import data from "../data/portfolio.json";
 import Image from "next/image";
+import Skills from "../components/Skills";
 
 export default function Home() {
   // Ref
@@ -148,9 +149,10 @@ export default function Home() {
           </div>
           <div className="laptop:flex-3 w-100 mob:mt-10">
             <h1 className="tablet:m-10 text-4xl text-bold">Skills</h1>
-            <p className="tablet:m-10 mt-2 text-xl laptop:text-sm w-full laptop:w-3/5 mob:text-sm">
-              {data.skills}
-            </p>
+            <div className="tablet:m-10 mt-2 text-xl laptop:text-5xl w-full laptop:w-3/5 mob:text-sm grid grid-cols-1 tablet:grid-cols-6 gap-4">
+              {/* {data.skills} */}
+              <Skills />
+            </div>
           </div>
         </div>
         <Footer />
