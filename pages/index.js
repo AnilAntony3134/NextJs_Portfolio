@@ -67,7 +67,7 @@ export default function Home() {
         />
         <div>
 
-          <div className="laptop:mt-40 mt-6 laptop:mb-20 mob:mt-40 mob:mb-40 flex justify-between">
+          <div className="laptop:mt-40 mt-6 laptop:mb-20 mob:mt-20 mob:mb-10 flex justify-between">
             <div className="mt-8 flex flex-col items-center">
               <h1
                 ref={textOne}
@@ -100,14 +100,16 @@ export default function Home() {
             <div>
             </div>
           </div>
-          <Socials className="justify-center mt-2 laptop:mt-7" />
+          <div className="mob:mb-40">
+            <Socials className="justify-center mt-1 laptop:mt-7" />
+          </div>
 
         </div>
 
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={workRef}>
           <h1 className="text-2xl text-bold text-center">Work</h1>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-3 gap-4">
+          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-3 gap-4 mob:p-2">
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}
@@ -143,13 +145,13 @@ export default function Home() {
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0 flex w-full mob: flex-col" ref={aboutRef}>
           <div className="laptop:flex-5">
             <h1 className="tablet:m-10 text-4xl text-bold">Things I do.</h1>
-            <p className="tablet:m-10 mt-2 text-xl laptop:text-xl w-full laptop:w-3/5 mob:text-sm">
+            <p className="tablet:m-10 mt-2 text-xl laptop:text-xl w-full laptop:w-3/5 mob:text-sm mob:p-2 text-justify">
               {data.aboutpara}
             </p>
           </div>
           <div className="laptop:flex-3 w-100 mob:mt-10">
             <h1 className="tablet:m-10 text-4xl text-bold">Skills</h1>
-            <div className="tablet:m-10 mt-2 text-xl laptop:text-5xl w-full laptop:w-3/5 mob:text-sm grid grid-cols-1 tablet:grid-cols-6 gap-4">
+            <div className="tablet:m-10 mt-2 text-xl laptop:text-5xl w-full laptop:w-3/5 mob:text-4xl grid grid-cols-3 tablet:grid-cols-6 gap-4">
               {/* {data.skills} */}
               <Skills />
             </div>
